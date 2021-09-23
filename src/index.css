@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary-100: #f8f4fc;
+  --color-primary-200: #f5effd;
+  --color-primary-300: #f5edff;
+  --color-primary-400: #f4eaff;
+  --color-primary-500: #d9bbff;
+  --color-primary-600: #a45ffd;
+  --color-primary-700: #923dfe;
+
+  --color-secondary-400: #ffe299;
+  --color-secondary-500: #ffc83c;
+  --color-secondary-600: #c48221;
+}
+
+body {
+  overflow: hidden;
+}

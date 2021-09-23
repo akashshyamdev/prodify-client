@@ -1,0 +1,16 @@
+.signup {
+  background: linear-gradient(107.56deg, #ffcab9 0%, #fabeff 100%);
+
+  &__bg-element {
+    background: #ff93c6;
+    filter: blur(105px);
+  }
+
+  &__form {
+    background: radial-gradient(98.91% 230.7% at 1.09% 2.55%, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.1) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-sizing: border-box;
+    border-radius: 20px;
+    width: 30%;
+  }
+}

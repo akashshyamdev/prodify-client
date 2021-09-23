@@ -1,0 +1,52 @@
+.btn {
+  @apply text-white rounded-lg font-sans px-12 py-3 text-2xl border-4 border-solid transition-all duration-200 ease-in-out;
+}
+
+.btn:active {
+  transform: translateY(5px);
+}
+
+.btn--white:hover,
+.btn--primary {
+  color: white;
+  background-color: var(--color-primary-700);
+  border-color: var(--color-primary-700);
+}
+
+.btn--primary-border {
+  background-color: transparent;
+  border-color: var(--color-primary-700);
+}
+
+.btn--primary:hover,
+.btn--primary-border:hover {
+  box-shadow: 5px 5px 3px #6821c3;
+}
+
+.btn--secondary {
+  background-color: var(--color-secondary-500);
+  border-color: var(--color-secondary-500);
+}
+
+.btn--secondary-border {
+  background-color: transparent;
+  border-color: var(--color-secondary-500);
+  color: var(--color-secondary-500);
+}
+
+.btn--secondary:hover,
+.btn--secondary-border:hover {
+  color: white;
+  background: #ffc83c;
+  box-shadow: 5px 5px 3px #c48221;
+}
+
+.btn--pill {
+  border-radius: 200px;
+}
+
+.btn--white {
+  background-color: white;
+  border-color: transparent;
+  color: var(--color-primary-700);
+}

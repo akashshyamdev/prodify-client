@@ -1,0 +1,25 @@
+$blur: blur(9px);
+$b-width: 3px;
+$bg-gradient: radial-gradient(98.91% 230.7% at 1.09% 2.55%, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%);
+
+.input {
+  position: relative;
+  background: $bg-gradient;
+  border: $b-width solid #ffffff;
+  box-sizing: border-box;
+  border-radius: 98px;
+  padding: 10px 30px;
+  width: 75%;
+  font-size: 1.6rem;
+  color: white;
+
+  &:focus {
+    outline: none;
+  }
+
+  &::placeholder {
+    font-family: 'Poppins', serif;
+    font-size: 1.6rem;
+    color: white;
+  }
+}

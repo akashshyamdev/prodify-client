@@ -1,0 +1,90 @@
+{
+	"name": "developer",
+	"version": "0.1.0",
+	"private": true,
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
+	},
+	"lint-staged": {
+		"src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+			"prettier --single-quote --write",
+			"git add"
+		]
+	},
+	"dependencies": {
+		"@reduxjs/toolkit": "^1.6.1",
+		"@testing-library/jest-dom": "^5.11.4",
+		"@testing-library/react": "^11.1.0",
+		"@testing-library/user-event": "^12.1.10",
+		"axios": "^0.21.1",
+		"react": "^17.0.2",
+		"react-dom": "^17.0.2",
+		"react-facebook-login": "^4.1.1",
+		"react-github-login": "^1.0.3",
+		"react-google-login": "^5.2.2",
+		"react-mic": "^12.4.6",
+		"react-query": "^3.23.2",
+		"react-redux": "^7.2.4",
+		"react-router-dom": "^5.2.0",
+		"react-scripts": "4.0.3",
+		"react-social-login-buttons": "^3.5.0",
+		"redux": "^4.1.0",
+		"redux-thunk": "^2.3.0",
+		"styled-components": "^5.3.0",
+		"typescript": "^4.1.2",
+		"web-vitals": "^1.0.1"
+	},
+	"scripts": {
+		"start": "craco start",
+		"build": "craco build",
+		"test": "craco test",
+		"eject": "react-scripts eject"
+	},
+	"eslintConfig": {
+		"extends": [
+			"react-app",
+			"react-app/jest"
+		]
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	},
+	"devDependencies": {
+		"@craco/craco": "^6.2.0",
+		"@types/dom-mediacapture-record": "^1.0.10",
+		"@types/jest": "^26.0.24",
+		"@types/jest-axe": "^3.5.2",
+		"@types/node": "^12.0.0",
+		"@types/react": "^17.0.0",
+		"@types/react-dom": "^17.0.0",
+		"@types/react-facebook-login": "^4.1.4",
+		"@types/react-mic": "^12.4.3",
+		"@types/react-redux": "^7.1.18",
+		"@types/react-router-dom": "^5.1.8",
+		"@types/redux": "^3.6.0",
+		"@types/redux-saga": "^0.10.5",
+		"@types/styled-components": "^5.1.11",
+		"autoprefixer": "^9.8.6",
+		"babel-plugin-module-resolver": "^4.1.0",
+		"husky": "^7.0.1",
+		"jest": "^26.6.0",
+		"jest-axe": "^5.0.1",
+		"lint-staged": "^11.0.0",
+		"postcss": "^7.0.36",
+		"prettier": "^2.3.2",
+		"prettier-plugin-organize-imports": "^2.2.0",
+		"tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.14",
+		"ts-jest": "^26.5.6"
+	}
+}
