@@ -2,5 +2,8 @@
   "viewportWidth": 1200,
   "viewportHeight": 792,
   "baseUrl": "http://localhost:3000",
-  "integrationFolder": "cypress/e2e"
+  "integrationFolder": "cypress/e2e",
+  "env": {
+    "server_url": "http://localhost:5000/api"
+  }
 }
