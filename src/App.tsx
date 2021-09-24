@@ -10,6 +10,8 @@ import Dashboard from './containers/Dashboard/Dashboard';
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
+      {process.env.JEST_WORKER_ID && <div data-testid={'router'}>TEST</div>}
+
       <Router history={history}>
         {/* Auth */}
         <Route exact path="/auth/signup" component={Signup} />
