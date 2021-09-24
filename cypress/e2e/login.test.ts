@@ -1,20 +1,12 @@
 /// <reference types="cypress" />
-import { builderUser } from '../support/generate';
+import {} from 'cypress';
 
 describe('login', function () {
   beforeEach(() => {
-    const user = builderUser();
-
-    console.log(Cypress.env('server_url'));
-
-    cy.request('POST', `${Cypress.env('server_url')}/developers/signup`, {
-      firstName: user.firstName,
-      lastName: user.lastName,
-      email: user.email,
-      password: user.password,
+    // @ts-ignore
+    cy.createUser().then((user) => {
+      cy.wrap(user).as('currentUser');
     });
-
-    cy.wrap(user).as('currentUser');
   });
 
   it('should login the user', function () {

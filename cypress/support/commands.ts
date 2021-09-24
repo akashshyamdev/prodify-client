@@ -23,3 +23,32 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+import { builderUser } from './generate';
+
+declare namespace Cypress {
+  interface Chainable {
+    /**
+     * Custom command to create a user on the backend using fake data
+     * @example cy.createUser()
+     * @returns a promise containing the firstName, lastName, email, password, _id etc
+     */
+    createUser(overrides?: object): Promise<{
+      firstName: string;
+      lastName: string;
+      email: string;
+      password: string;
+    }>;
+  }
+}
+
+
+Cypress.Commands.add('createUser', (overrides) => {
+  const user = builderUser(overrides);
+
+  cy.request('POST', `${Cypress.env('server_url')}/developers/signup`, {
+    firstName: user.firstName,
+    lastName: user.lastName,
+    email: user.email,
+    password: user.password,
+  }).then((response) => ({ ...response.body.data, ...user }));
+});
