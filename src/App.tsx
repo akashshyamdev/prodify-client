@@ -1,6 +1,6 @@
 import React from 'react';
 import { QueryClientProvider } from 'react-query';
-import { Route, Router } from 'react-router-dom';
+import { Route, Router, Switch } from 'react-router-dom';
 import history from './config/history';
 import queryClient from './config/query';
 import Login from './containers/Auth/Login/Login';
@@ -13,12 +13,14 @@ function App() {
       {process.env.JEST_WORKER_ID && <div data-testid={'router'}>TEST</div>}
 
       <Router history={history}>
-        {/* Auth */}
-        <Route exact path="/auth/signup" component={Signup} />
-        <Route exact path="/auth/login" component={Login} />
+        <Switch>
+          {/* Auth */}
+          <Route exact path="/auth/signup" component={Signup} />
+          <Route exact path="/auth/login" component={Login} />
 
-        {/* Dashboard */}
-        <Dashboard />
+          {/* Dashboard */}
+          <Dashboard />
+        </Switch>
       </Router>
     </QueryClientProvider>
   );
