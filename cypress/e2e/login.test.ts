@@ -3,7 +3,6 @@ import {} from 'cypress';
 
 describe('login', function () {
   beforeEach(() => {
-    // @ts-ignore
     cy.createUser().then((user) => {
       cy.wrap(user).as('currentUser');
     });
