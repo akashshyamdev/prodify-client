@@ -1,5 +1,6 @@
 import { BellIcon, BookmarkIcon, ChartBarIcon, ClockIcon, CogIcon, HomeIcon, ViewListIcon } from '@heroicons/react/solid';
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './sidebar.scss';
 
 export interface SidebarProps {
@@ -8,52 +9,52 @@ export interface SidebarProps {
 
 export default function Sidebar({ className }: SidebarProps) {
   return (
-    <aside className={`sidebar ${className}`}>
+    <aside className={`sidebar ${className}`} data-testid={'sidebar'}>
       <ul className={'sidebar__items sidebar__items-Main'}>
-        <li className={'sidebar__item'}>
+        <Link to={'/'} className={'sidebar__item'}>
           <HomeIcon className={'h-8 sidebar__icon'} />
 
           <p className={'sidebar__link'}>Dashboard</p>
-        </li>
+        </Link>
 
-        <li className={'sidebar__item'}>
+        <Link to={'/todos'} className={'sidebar__item'}>
           <ViewListIcon className={'h-8 sidebar__icon'} />
 
           <p className={'sidebar__link'}>Todos</p>
-        </li>
+        </Link>
 
-        <li className={'sidebar__item'}>
+        <Link to={'/notes'} className={'sidebar__item'}>
           <BookmarkIcon className={'h-8 sidebar__icon'} />
 
           <p className={'sidebar__link'}>Notes</p>
-        </li>
+        </Link>
 
-        <li className={'sidebar__item'}>
+        <Link to={'/timer'} className={'sidebar__item'}>
           <ClockIcon className={'h-8 sidebar__icon'} />
 
           <p className={'sidebar__link'}>Timer</p>
-        </li>
+        </Link>
 
-        <li className={'sidebar__item'}>
+        <Link to={'/tracker'} className={'sidebar__item'}>
           <ChartBarIcon className={'h-8 sidebar__icon'} />
 
           <p className={'sidebar__link'}>Tracker</p>
-        </li>
+        </Link>
       </ul>
 
       {/* Sub Items */}
       <ul className={'sidebar__items sidebar__items--sub'}>
-        <li className={'sidebar__item'}>
+        <Link to={'/notifications'} className={'sidebar__item'}>
           <BellIcon className={'h-8 sidebar__icon'} />
 
           <p className={'sidebar__link'}>Notifications</p>
-        </li>
+        </Link>
 
-        <li className={'sidebar__item'}>
+        <Link to={'/settings'} className={'sidebar__item'}>
           <CogIcon className={'h-8 sidebar__icon'} />
 
           <p className={'sidebar__link'}>Settings</p>
-        </li>
+        </Link>
       </ul>
     </aside>
   );
