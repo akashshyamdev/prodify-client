@@ -1,11 +1,11 @@
 name: React Continous Integration
-on: push
+on: pull_request
 jobs:
   test_push:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/node@v1
+      - uses: actions/setup-node@v1
         with:
           node_version: 14
       - run: npm ci
