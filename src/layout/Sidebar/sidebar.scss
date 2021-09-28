@@ -6,19 +6,27 @@
   width: 20%;
   height: 100vh;
   background: var(--color-primary-700);
+  padding: 2rem 0;
 
   &__item {
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 15px 20px;
+    padding: 15px 30px;
     font-family: 'Poppins', sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
+    background: var(--color-primary-700);
+    transition: 0.3s all ease-out;
 
-    svg {
-      margin-right: 1.25rem;
+    &:hover {
+      background: var(--color-primary-800);
     }
+  }
+
+  &__link {
+    font-size: 1.4rem;
+  }
+
+  &__icon {
+    margin-right: 2rem;
   }
 }
